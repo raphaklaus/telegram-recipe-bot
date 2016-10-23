@@ -1,0 +1,26 @@
+{
+  "name": "telegram-recipe-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaklaus/telegram-recipe-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphaklaus/telegram-recipe-bot/issues"
+  },
+  "homepage": "https://github.com/raphaklaus/telegram-recipe-bot#readme",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "cheerio": "^0.22.0",
+    "dotenv": "^2.0.0",
+    "node-telegram-bot-api": "^0.24.0",
+    "request-promise": "^4.1.1"
+  }
+}
