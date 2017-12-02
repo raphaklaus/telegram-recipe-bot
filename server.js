@@ -1,4 +1,6 @@
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production')
+  require('dotenv').config();
+
 
 const TelegramBot = require('node-telegram-bot-api'),
   bot = new TelegramBot(process.env.BOT_TOKEN, {polling: true}),
