@@ -11,7 +11,7 @@ const TelegramBot = require('node-telegram-bot-api'),
   rootSite = 'http://www.tudogostoso.com.br';
 
 httpAgent.maxSockets = 15;
-const $;
+var $;
 
 bot.onText(/\/receita (.+)/ , (msg, match) => {
   console.log(msg)
@@ -47,7 +47,10 @@ bot.onText(/\/receita (.+)/ , (msg, match) => {
     return bot.sendMessage(fromId, `Receita: ${pageInfo.title} \n*Ingredientes* \n\n${pageInfo.ingredients.join('\n\n')}` +
       `\n\n*Modo de preparo*\n${pageInfo.instructions.join('\n\n')}`, {parse_mode: 'Markdown'});
   })
-  .catch(error => console.log(error));
+  .catch(error => {
+    console.log(error);
+    bot.sendMessage(fromId, 'Não consegui localizar uma receita com esse ingrediente 😅', { parse_mode: 'Markdown' });
+  });
 });
 
 const generateOptions = (uri) => {
